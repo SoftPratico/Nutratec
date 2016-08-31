@@ -1,0 +1,325 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{97BD2855-D9C7-4648-A8C6-24CE5674245C}</ProjectGuid>
+			<MainSource>prjNutratec.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_ExeOutput>..\exe</DCC_ExeOutput>
+			<DCC_UsePackage>rtl;vcl;vclx;vclimg;vclactnband;dbrtl;vcldb;vcldbx;bdertl;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;webdsnap;inetdbbde;inetdbxpress;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;inetdb;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;websnap;soaprtl;fs14;frx14;frxcs14;fsDB14;frxDB14;fsBDE14;frxBDE14;fsADO14;frxADO14;fsIBX14;frxIBX14;frxDBX14;frxe14;fsTee14;frxTee14;QImport2RT_D10;QExport4RT_D14;mxProtector_d14;SMCmpntD2010;pckUniDacConnD2010;pckUCDataConnector_D13;pckUserControl_RT13;unidac140;dac140;frxUniDAC14;frxDAC14;unidacvcl140;dacvcl140;crcontrols140;ACBrComum;ACBrDiversos;ACBrSerial;ACBr_SPED;ACBr_NFe2;ACBrCapicom;ACBrNFeDanfeFRpkg;Usertility140;dxCoreRS14;cxLibraryRS14;dxGDIPlusRS14;dxThemeRS14;dxServerModeRS14;cxDataRS14;dxADOServerModeRS14;dxDBXServerModeRS14;dxmdsRS14;cxEditorsRS14;cxPageControlRS14;dxDockingRS14;dxLayoutControlRS14;dxComnRS14;dxNavBarRS14;dxWizardControlRS14;cxGridRS14;cxExportRS14;cxPivotGridRS14;cxPivotGridChartRS14;cxPivotGridOLAPRS14;cxTreeListRS14;dxBarRS14;cxBarEditItemRS14;dxRibbonRS14;dxTabbedMDIRS14;dxBarExtItemsRS14;dxBarExtDBItemsRS14;dxBarDBNavRS14;cxSchedulerRS14;cxSchedulerGridRS14;cxSchedulerTreeBrowserRS14;cxSchedulerRibbonStyleEventEditorRS14;cxVerticalGridRS14;dxdbtrRS14;dxtrmdRS14;dxSkinsCoreRS14;dxPScxPCProdRS14;dxPSCoreRS14;dxPSLnksRS14;dxPScxCommonRS14;dxPScxExtCommonRS14;dxPSTeeChartRS14;dxPSDBTeeChartRS14;dxPsPrVwAdvRS14;dxPSPrVwRibbonRS14;dxSpellCheckerRS14;dxFlowChartRS14;dxorgcRS14;dxdborRS14;dxTileControlRS14;cxTreeListdxBarPopupMenuRS14;dxSkinscxPCPainterRS14;dxSkinscxSchedulerPainterRS14;dxSkinsdxBarPainterRS14;dxSkinsdxDLPainterRS14;dxSkinsdxNavBarPainterRS14;dxSkinsdxRibbonPainterRS14;dxSkinBlackRS14;dxSkinBlueprintRS14;dxSkinBlueRS14;dxSkinCaramelRS14;dxSkinCoffeeRS14;dxSkinDarkRoomRS14;dxSkinDarkSideRS14;dxSkinDevExpressDarkStyleRS14;dxSkinDevExpressStyleRS14;dxSkinFoggyRS14;dxSkinGlassOceansRS14;dxSkinHighContrastRS14;dxSkiniMaginaryRS14;dxSkinLilianRS14;dxSkinLiquidSkyRS14;dxSkinLondonLiquidSkyRS14;dxSkinMcSkinRS14;dxSkinMetropolisDarkRS14;dxSkinMetropolisRS14;dxSkinMoneyTwinsRS14;dxSkinOffice2007BlackRS14;dxSkinOffice2007BlueRS14;dxSkinOffice2007GreenRS14;dxSkinOffice2007PinkRS14;dxSkinOffice2007SilverRS14;dxSkinOffice2010BlackRS14;dxSkinOffice2010BlueRS14;dxSkinOffice2010SilverRS14;dxSkinOffice2013DarkGrayRS14;dxSkinOffice2013LightGrayRS14;dxSkinOffice2013WhiteRS14;dxSkinPumpkinRS14;dxSkinSevenClassicRS14;dxSkinSevenRS14;dxSkinSharpPlusRS14;dxSkinSharpRS14;dxSkinSilverRS14;dxSkinSpringTimeRS14;dxSkinStardustRS14;dxSkinSummer2008RS14;dxSkinTheAsphaltWorldRS14;dxSkinValentineRS14;dxSkinVS2010RS14;dxSkinWhiteprintRS14;dxSkinXmas2008BlueRS14;dxPSdxLCLnkRS14;dxPScxGridLnkRS14;dxPScxPivotGridLnkRS14;dxPScxSchedulerLnkRS14;dxPScxTLLnkRS14;dxPScxVGridLnkRS14;dxPSdxOCLnkRS14;dxPSdxDBOCLnkRS14;dxPSdxDBTVLnkRS14;dxPSdxFCLnkRS14;MyBusiness;EurekaLogCore</DCC_UsePackage>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DcuOutput>..\..\DCU</DCC_DcuOutput>
+			<DCC_DependencyCheckOutputName>..\exe\prjNutratec.exe</DCC_DependencyCheckOutputName>
+			<BRCC_CompilerToUse>rc</BRCC_CompilerToUse>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_MapFile>3</DCC_MapFile>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="prjNutratec.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\..\_RotBas\DefVar.pas"/>
+			<DCCReference Include="..\..\_RotBas\Funcoes.pas"/>
+			<DCCReference Include="..\..\_RotBas\FuncoesDM.pas"/>
+			<DCCReference Include="..\..\_RotBas\md5.pas"/>
+			<DCCReference Include="..\..\_RotBas\UTraducao.pas"/>
+			<DCCReference Include="..\..\_RotBas\DMSkin.pas">
+				<Form>DMSKN</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\DMConexao.pas">
+				<Form>DMCNX</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmPrincipal.pas">
+				<Form>frmPrinc</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmGauge.pas">
+				<Form>FGauge</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\FrmSplash.pas">
+				<Form>Splash</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\FrmLogin.pas">
+				<Form>Login</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmWebBrowser.pas">
+				<Form>FWebBrowser</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\FrmBrowseEdit.pas">
+				<Form>FBrowseEdit</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmEdita.pas">
+				<Form>FoEdita</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\FrmCalendario.pas">
+				<Form>FrmCal</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmAbout.pas">
+				<Form>About</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmRelatorios.pas">
+				<Form>Relatorios</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmExcluiRelatorio.pas">
+				<Form>ExcluiRelatorio</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmEnviaEmail.pas">
+				<Form>FoEnviaEMail</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmRegistraAplicacao.pas">
+				<Form>FoRegistraAplicacao</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmTestaConexao.pas">
+				<Form>TestaConexao</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmEditaLista.pas">
+				<Form>FEditaLista</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmMensagem.pas">
+				<Form>foMensagem</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\ConsultaCEP.pas"/>
+			<DCCReference Include="..\..\_RotBas\SPMenu.pas">
+				<Form>frmMenu</Form>
+			</DCCReference>
+			<DCCReference Include="SPMenuNutratec.pas">
+				<Form>foMenuNutratec</Form>
+			</DCCReference>
+			<DCCReference Include="DMnutratec.pas">
+				<Form>DMNT</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmPesquisa.pas">
+				<Form>FormPesquisa</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmBEPaises.pas">
+				<Form>FBEPaises</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\DMGenerico.pas">
+				<Form>DMGEN</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frmBELogradouros.pas">
+				<Form>FBELogradouros</Form>
+			</DCCReference>
+			<DCCReference Include="frmBECFOPs.pas">
+				<Form>FBECFOPS</Form>
+			</DCCReference>
+			<DCCReference Include="frmBECSTs.pas">
+				<Form>FBECSTS</Form>
+			</DCCReference>
+			<DCCReference Include="frmBEEntidades.pas">
+				<Form>FBEEntidades</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\_RotBas\frameEdita.pas">
+				<Form>FrameEdit</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FrameEditEntidadesAquario.pas">
+				<Form>frameEditEntAquario</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="frmEdImportaClientesXMLNFe.pas">
+				<Form>foImportaClientesXMLNFe</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">prjNutratec.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">1</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Nuttz</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.1</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">Nutratec</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.1</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\ACBrNFeDanfeRV.bpl">ACBrNFeDanfeRV - (http://acbr.sourceforge.net/)</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\ACBrNFeDanfeRVCodeBase.bpl">ACBrNFeDanfeRVCodeBase - (http://acbr.sourceforge.net/)</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
+
+<!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=7007
+Activate=0
+atVCL=1
+AutoCrashOperation=2
+boHandleSafeCallExceptions=1
+boUseMainModuleOptions=1
+csoAllowedRenderMethods=8
+csoShowWindowsThreads=1
+DeleteMapAfterCompile=0
+dpJCL=1
+Email Address=""
+Email Object=""
+Encrypt Password=""
+Errors Number=32
+Errors Terminate=3
+Freeze Timeout=0
+idEurekaLog=1
+idEurekaLogDetailed=1
+idMSClassic=1
+idStepsToReproduce=1
+loCatchLeaks=0
+loFreeAllLeaks=1
+loHideRTLLeaks=0
+loMaxLeaks=1024
+loOnlyUnderIDE=0
+loProcessesSection=1
+Output Path=""
+ProjectID="{45E49291-C095-4CC1-9B6F-DA6BBDFA7DA4}"
+SMTP From="eurekalog@email.com"
+SMTP Host=""
+SMTP UserID=""
+sndAddDateInFileName=0
+sndBugZillaLogin=""
+sndBugZillaPort=0
+sndBugZillaURL=""
+sndFogBugzHost=""
+sndFogBugzLogin=""
+sndFogBugzPort=0
+sndFTPLogin=""
+sndFTPPort=0
+sndFTPURL=""
+sndHTTPPort=0
+sndHTTPURL=""
+sndJIRAHost=""
+sndJIRALogin=""
+sndJIRAPort=0
+sndMantisLogin=""
+sndMantisPort=0
+sndMantisURL=""
+sndMAPISubject=""
+sndMAPITarget=""
+sndShellRecepient=""
+sndShellSubject=""
+sndSMAPISubject=""
+sndSMAPITarget=""
+sndSMTPClientFrom="eurekalog@email.com"
+sndSMTPClientHost=""
+sndSMTPClientLogin=""
+sndSMTPClientSubject=""
+sndSMTPClientTarget=""
+sndSMTPServerFrom="eurekalog@email.com"
+sndSMTPServerSubject=""
+sndSMTPServerTarget=""
+soActCtlsControlClass=1
+soActCtlsControlText=1
+soActCtlsFormClass=1
+soActCtlsFormText=1
+soAppCompilationDate=1
+soAppName=1
+soAppParameters=1
+soAppStartDate=1
+soAppUpTime=1
+soAppVersionNumber=1
+soCmpDisplayDPI=1
+soCmpDisplayMode=1
+soCmpFreeDisk=1
+soCmpFreeMemory=1
+soCmpName=1
+soCmpPrinter=1
+soCmpProcessor=1
+soCmpSysUpTime=1
+soCmpTotalDisk=1
+soCmpTotalMemory=1
+soCmpVideoCard=1
+soCustomData=1
+soExcCount=1
+soExcDate=1
+soExcModuleName=1
+soExcModuleVersion=1
+soExcNote=1
+soExcStatus=1
+soNetDHCP=1
+soNetDNS1=1
+soNetDNS2=1
+soNetGateway=1
+soNetIP=1
+soNetSubmask=1
+soOSBuildN=1
+soOSCharset=1
+soOSLanguage=1
+soOSType=1
+soOSUpdate=1
+soUserCompany=1
+soUserID=1
+soUserPrivileges=1
+TrakerUser=""
+WebPort=0
+WebURL=""
+EurekaLog Last Line -->
